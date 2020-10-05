@@ -10,7 +10,8 @@ def rotLeft(a, d):
     # return rotated
 
     # Alternative solution: List Slicing
-    return a[d:] + a[:d]
+    # slice including the index
+    return a[d % len(a):] + a[:d % len(a)]
 
 
 if __name__ == '__main__':
